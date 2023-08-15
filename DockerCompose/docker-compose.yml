@@ -2,10 +2,18 @@
 version: '3'
 services:
   service1:
+    # указываем название образа, который получится в процессе билда
+    image: ruby_version3_0_2
+    # имя контейнера, который будет стартовать от образа
+    container_name: ruby_version3_0_2_container
     build:
       context: ./DockerfileForRuby3-0-2
       dockerfile: Dockerfile
   service2:
+    # указываем название образа, который получится в процессе билда
+    image: ruby_version2_7_4
+    # имя контейнера, который будет стартовать от образа
+    container_name: ruby_version2_7_4_container
     build:
       context: ./DockerfileForRuby2-7-4
       dockerfile: Dockerfile
